@@ -2,17 +2,21 @@ package Classes;
 
 public class Mots {
 	
-	private String Taille;
-	private String Definition;
+	String Taille;
+	String Definition;
 	
-	public Mots(){}
+	
+	
+	public Mots() {
+		
+	}
 	
 	public Mots(String taille, String definition) {
 		super();
 		Taille = taille;
 		Definition = definition;
 	}
-	
+
 	public String getTaille() {
 		return Taille;
 	}
@@ -25,6 +29,8 @@ public class Mots {
 	public void setDefinition(String definition) {
 		Definition = definition;
 	}
+	
+	
 	
 
 }
