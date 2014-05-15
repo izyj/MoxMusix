@@ -1,4 +1,4 @@
-package Interfaces;
+package interfaces;
 
 import javax.swing.ImageIcon;
 import java.awt.Graphics;
