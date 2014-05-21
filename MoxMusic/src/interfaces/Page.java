@@ -23,7 +23,7 @@ class Page extends JFrame{
 
         
         this.setResizable(false);
-        this.setLocationRelativeTo(null);//position de la fenetre a l'ouverture
+        this.setLocationRelativeTo(null);//centre la fenetre a l'ouverture
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);// fermer grace a la croix
         this.setTitle("MoXMusic");
         this.setSize(500,600);
