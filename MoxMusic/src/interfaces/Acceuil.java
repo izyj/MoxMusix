@@ -7,10 +7,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
+import commun.Page;
 
 /**
  *
@@ -20,9 +28,9 @@ public class Acceuil extends Page implements ActionListener {
 
     protected JButton ajoutMot;
     protected JButton supprimerMot;
-    protected JButton nouvellePartie;
+    protected JButton BoutonPause;
     protected JButton score;
-    protected JButton quitter = new JButton();
+    protected JButton boutonLecture = new JButton();
     protected JPanel contener = new JPanel();
     protected JPanel contener1 = new JPanel();
     protected JPanel contener2 = new JPanel();
@@ -77,24 +85,28 @@ public class Acceuil extends Page implements ActionListener {
         contener2.add(supprimerMot);
         contener.add(contener2);
         
-        nouvellePartie = new JButton(new ImageIcon("D:\\cle\\ecole\\Developpement\\java\\projet 3\\bouton-jouer2_03.gif"));
-        nouvellePartie.setPressedIcon(new ImageIcon("D:\\cle\\ecole\\Developpement\\java\\projet 3\\bouton-jouer2_03on.png"));
-        nouvellePartie.addActionListener(this);
-        nouvellePartie.setOpaque(false);
-        nouvellePartie.setContentAreaFilled(false);
-        nouvellePartie.setBorderPainted(false);
-        nouvellePartie.setPreferredSize(new Dimension(200,100));
-        contener3.add(nouvellePartie);
+        BoutonPause = new JButton(new ImageIcon("D:\\ESGI\\projets\\projet annuel\\2013-2014\\Java\\images\\boutonPause.png"));
+        BoutonPause.setPressedIcon(new ImageIcon("D:\\ESGI\\projets\\projet annuel\\2013-2014\\Java\\images\\boutonPause.png"));
+        BoutonPause.addActionListener(this);
+        BoutonPause.setOpaque(false);
+        BoutonPause.setContentAreaFilled(false);
+        BoutonPause.setBorderPainted(false);
+        BoutonPause.setPreferredSize(new Dimension(200,100));
+        contener4.add(BoutonPause);
         contener.add(contener3);
         
-        quitter = new JButton(new ImageIcon("D:\\cle\\ecole\\Developpement\\java\\projet 3\\bouton-jouer2_06.jpg"));
-        quitter.setPressedIcon(new ImageIcon("D:\\cle\\ecole\\Developpement\\java\\projet 3\\bouton-jouer2_06on.jpg"));
-        quitter.addActionListener(this);
-        quitter.setOpaque(false);
-        quitter.setContentAreaFilled(false);
-        quitter.setBorderPainted(false);
-        quitter.setPreferredSize(new Dimension(200,100));
-        contener4.add(quitter);
+        
+        boutonLecture = new JButton(new ImageIcon("D:\\ESGI\\projets\\projet annuel\\2013-2014\\Java\\images\\boutonLecture.png"));
+        boutonLecture.setPressedIcon(new ImageIcon("D:\\ESGI\\projets\\projet annuel\\2013-2014\\Java\\images\\boutonLecture.png"));
+        boutonLecture.addActionListener(this);
+        boutonLecture.setOpaque(false);
+        boutonLecture.setContentAreaFilled(false);
+        boutonLecture.setBorderPainted(false);
+        boutonLecture.setPreferredSize(new Dimension(100,100));
+        
+        
+        
+        contener4.add(boutonLecture);
         contener.add(contener4);
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// fermer grace a la croix
@@ -106,10 +118,10 @@ public class Acceuil extends Page implements ActionListener {
     }
 public void actionPerformed(ActionEvent e) {
 
-      //  if(e.getSource()==ajoutMot){
-      //  AjoutMot ajout = new AjoutMot();
-
-        //}
+        if(e.getSource()==boutonLecture){
+        	// recuêre le chemin du fichier
+        	
+        }
 	//        if(e.getSource()==supprimerMot){
         	//            SupprimerMot test = new SupprimerMot();       
 
@@ -128,4 +140,4 @@ public void actionPerformed(ActionEvent e) {
 	//         System.exit(0);
 
         }
-    }
+}
