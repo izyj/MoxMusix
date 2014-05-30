@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+    <bean id="album" class="classes.Album" >
+        <property name="idAlbum" value="8"></property>
+		<property name="lesChanson" ref="Chanson"></property>
+		<property name="titreAlbum" value="RED"></property>
+		<property name="titreNom" value="rr"></property>
+    </bean>
+
+	<bean id="Chanson" class="classes.Chanson">
+		<property name="idChanson" value="10"></property>
+		<property name="titre" value="RocknROSE"></property>
+		<property name="unGenre" ref="Genre"></property>
+	</bean>
+	
+	<bean id="Genre" class="classes.Genre">
+		<property name="idGenre" value="7"></property>
+		<property name="nomGenre" value="Rock"></property>
+	</bean>
+	
+ 	<bean id="user" class="classes.Utilisateur">
+	 	<property name="nom" value="Jean"></property>
+	 	<property name="prenom" value="Basque"></property>
+	 	<property name="mesAlbum" ref="album"></property>
+ 	</bean>
+ 
+</beans>
+ 
